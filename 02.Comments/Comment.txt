@@ -1,0 +1,8 @@
+Comment in programming language are documentation formeted by developer in order to make 
+other developer undersatnd what the code is doing it is something which is not compiled and ignored
+by the compiler .
+
+In Programming Languages there are two type of variable :
+1)Block or multi-line comment (in java it is declare by /*comment*/)
+
+2)Single line in java its is declared by two forward slash ( //comment)

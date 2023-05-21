@@ -1,0 +1,131 @@
+Data type:Data type are declaration for variables.This determines the type and size of data associated with the variable which is essential to know since different data type occupy different size of memory
+
+*There are two type of Data types in Java:
+	1)Primitive Data Type:to store simple value.
+	2)Non Primitive Data Type :To store complex value
+
+
+#Primitive Data type :
+-----------------------------
+
+1)byte:8 bit 2's compliment integer ,8 bit unsigned number or integer can reperesent the value from 0 to 255(1111 1111) .However a two compliment 8 bit number can only represent positive integer from 0 to to 127 and negative side from -128 to -1 total range -128 to 127 in negative side the most significant bit as 1 represent the negative integer/sign
+
+The byte data type is used to save memory in large arrays where the memory saving is most required .It saves space because of byte size which is 4 times smaller than an integer .It can also be used in place of "int" data type:
+
+Ex:
+--
+byte a = 10;
+byte b=127;//max value 
+
+
+
+2)Short data type :
+--------------------
+The short data type is a 16 bit signed two compliment integer .Its value range lies between -32,768 to 32,767.Its minimum value is -32,768 and maximum value is 32,767.Its default value is 0
+
+The short data type can also be used to save memory  just like byte data type.A short data type is 2 times smaller than an integer
+
+
+Ex
+---
+
+short s=10000;
+short r =-5000;
+
+
+3)Int Data Type
+----------------
+
+integer or int datatype is a 32 bit signed two's compliment (ie both negative and positive )its value range is between -2,147,483,648(-2^31 or -2**31) ro 2,147,483,647((2^31)-1).Its Default value is 0.
+
+The int data type is generally used as default data type for integral value unless if there is no problem about memory.
+
+
+Ex:
+---
+int a = 1000000;
+int b=-2000000;
+
+
+
+4)float data type 
+-----------------
+The float data type is a single precission 32 -bit IEEE754 floating point.Its value range is unlimited but to 7 decimal .It is recommended to use a float(instead of double)if you need to save memory in large arrays of floating point number .
+
+
+The float data type should never be used for precise value , such as currency.It default valus is 0.0F or 0.0f
+
+Ex
+--
+
+float f1=234.5f;
+
+
+
+5)Double data type :
+---------------------
+The double data type is a double precission 64 bit iEEE754 floating point .Its value range is unlimited but upto 16 decimal digit  .The double data type is generally used for decimal value just like float .The double data type also should never be used for precise values, such as currency. Its default value is 0.0d.
+
+Example:
+double d1 = 12.3  
+
+
+
+6)Long Data Type
+___________________
+The long data type is a 64-bit two's complement integer. Its value-range lies between -9,223,372,036,854,775,808(-2^63) to 9,223,372,036,854,775,807(2^63 -1)(inclusive). Its minimum value is - 9,223,372,036,854,775,808and maximum value is 9,223,372,036,854,775,807. Its default value is 0. The long data type is used when you need a range of values more than those provided by int.
+
+Example:
+
+long a = 100000L, long b = -200000L  
+
+
+
+
+
+7)Char Data Type
+The char data type is a single 16-bit Unicode character. Its value-range lies between '\u0000' (or 0) to '\uffff' (or 65,535 inclusive).The char data type is used to store characters.
+
+Example:
+
+char letterA = 'A'  
+Why char uses 2 byte in java and what is \u0000 ?
+It is because java uses Unicode system not ASCII code system. The \u0000 is the lowest range of Unicode system.
+
+
+
+8)Boolean data type:
+------------------------
+
+boolen data type refers to true or false value with size of 1 byte 
+
+
+
+
+
+II)Non primitive data type:
+-------------------------------
+These are the variable size data type and are usually decalred using  "new" keyword which creates a 
+object of that data type
+
+Ex:String , Array
+
+
+String name=new String("Aman");
+int marks = new int[3];
+marks[0]=97;
+marks[1]=88;
+marks[2]=66;
+
+
+
+III)Constant:
+----------------
+A constant variable in Java is something which has a fixed value ie it cannot be assigned a different value once assigned.
+
+
+ex:
+final float PI=3.14f;
+
+
+In java to declare any Variable as constant we use static and final modifiers .It is also known as non-acess modifiers .According to the java naming convention the identifier must be in capital letter when using final or static
