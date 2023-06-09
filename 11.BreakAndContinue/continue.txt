@@ -1,0 +1,52 @@
+The continue statement is used in loop and conditional statement to control flow of program when need to jump to another iteration of loop without terminating it 
+
+In java continue statement is used to continue the loop.It contains the current flow of program 
+and skip the remaining code at the specified condition .In case of a inner loop it continues the inner loop only .
+
+We can use Java continue statement in all types of loop such as for , while and do while loop
+
+Syntax:
+
+continue;
+
+
+Java continue statement example :
+-----------------------------------
+
+continue statement in java for loop
+
+public class continueExample
+{
+	public static void main(String[] args)
+	{
+		for(int i=1;i<=10;i++)
+		{
+			if(i==5)
+			{
+				continue;
+			}
+			System.out.println(i);
+		}
+	}
+}
+
+output:
+1
+
+2
+
+3
+
+4
+
+-
+
+6
+
+7
+
+8
+
+9
+
+10

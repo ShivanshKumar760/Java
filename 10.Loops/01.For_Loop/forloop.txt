@@ -1,0 +1,147 @@
+for loop
+-The java for loop is used to iterate over a part of program several times if the number of iteration is fixed , it is recommended to use for loop
+
+-Syntax:
+--------
+for(initialize_of_iterator;condition;updation_of_iterator)
+{
+	
+}
+
+-types of for loop
+a)Simple for loop
+b)for-each or enhanced for loop
+c)labeled for loop
+
+
+A)simple for loop
+A simple for loop is the same for as C/C++.We can inititalize the variable , check condition and increment or decrement value . It consist of four parts
+
+i)Initialization
+It is the initial part or condition for loop to get executed is to intialize a iterator or variable we can also use already initalized variable in it 
+
+ii)condition:it is the second part of for loop in which we use a boolean expression condition based on iterator initialized to execute the loop till it is true 
+
+iii)Increment/Decrement:It increments or decrements the variable value.It is an optional condition but it should be used to make program optimal
+
+iv)Statement:The statement of the loop is executed each time unitl the condition becomes false
+statement is a block of code 
+
+
+-Syntax:
+--------
+for(initialize_of_iterator;condition;updation_of_iterator)
+{
+	
+}
+
+
+-Example:
+---------
+for(int i=0;i<10;i++)
+{
+	System.out.println(i);
+}
+o/p
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+B)for-each loop
+-The for each loop is used to iterate over array basically it is used to traverse array or collection of data in java.It is easier to use than simple for loop beacuse we dont have to increment value and use subscript notation
+
+It works on the basis of element and not the index.It returns element one by one in defined variable 
+
+Syntax:
+-----------
+for(data_type_of_collection variable<iterator>_name : array_name<collection_name>)
+{
+	//statement;
+
+}
+
+Example:
+-------
+public class forEach
+{
+	public static void main(String[] args)
+	{
+		int arr[]={12,23,44,56,78};
+		for(int i:arr)
+		{
+			System.out.println(i);
+		}
+	}
+}
+
+output:
+-------
+12
+23
+44
+56
+78
+
+
+C)Java labeled for loop
+
+
+-We can have a name of each java for loop,to do so we use label before the declaration of for loop.It is useful while using the nested for loop as we will see later on to break or continue a specific labeled loop.
+
+
+Note:
+-----
+The break or continue keyword breaks or continue the innermost for loop only
+until used with a label
+
+Syntax:
+
+labelName:
+for(initialize_of_iterator;condition;updation_of_iterator)
+{
+	
+}
+
+
+Example:
+
+label1:
+for(int i = 1;i<=3;i++)
+{
+	label2:
+	for(int j = 1;j<=3;j++)
+	{
+		if (i==2 && j==2){break label1;}
+		System.out.println(i+" "+j);
+	}
+}
+
+1 1
+1 2
+1 2
+2 1
+
+
+label1:
+for(int i = 1;i<=3;i++)
+{
+	label2:
+	for(int j = 1;j<=3;j++)
+	{
+		if (i==2 && j==2){break label2;}
+		System.out.println(i+" "+j);
+	}
+}
+1 1
+1 2
+1 2
+2 1
+3 1
+3 2
+3 3

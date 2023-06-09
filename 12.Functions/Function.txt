@@ -1,0 +1,58 @@
+Function in any programing language is a peice of code which is reusable and perform certain task,we use function when we have to perform a perticular task again and again so to save time and space instead of writing that peice of code in main block we create a function to perform that operation and call that peice of code anywhere from the program .
+
+In Java function is also known as Methods :In general a method is a way to perform a operation / some task .Method is a collectin of instruction that perform a specific operation.It provides reusablity of code.We can also easily modify code using Mehthod ie write a method once and use it as many times as required .
+
+The most important method in java is the main method ie main() or main(String[] args)
+
+1.main() method in java
+----------------------
+The main method in java or the main function in java is a special function which does not need to be called it is the starting point of a java program as the computer starts running the code from this point only ie from the begining of main() function/method.Main function serves ass the entry point for program.
+
+
+public static void main(String[] args)---main () funtion
+----------------------------------------------------------------------------------------------------------
+
+2.Method or Function Declaration.
+----------------------------------
+The method declaration provides info about method attributes such as visibility,return type,name and arguments or parameter of a method.It has six components that combine and forms a method header
+
+public    static                                                  int    sum         (int a , int b)
+------    ------                                                  ---    ---         ---------------
+  |          |                                                     |      |                   |
+  |          |                                             return type   Method_name       parameters
+  |          |
+Access       Method type(Optional)
+Specifier    There severa other types of 
+			 methdod also but static method indicate that a 
+			 method belongs to a class rather than a instance of 
+			 class which gives us a advantage of callling it
+			 without creating an object 
+
+
+[public static int sum(int a , int b)]---Method signature
+{
+	//Body or function defination ie defining what function should do
+}
+
+Method signature:method name + parameter list
+
+i)method signature:Every Method has a method signature.It is a part of method declaration.It includes the method name and parameter list
+
+ii)Access Specifier : Access Specifier or modifier is the access type of the method.It specifies the visiblity of the method.Java provides 4 type of access specifier :
+	a)public : accessible by all classes when we use public specifier in our application
+
+	b)private : When we use private access specifier ,the method is accessible only in the class in which it is declared
+
+	c)protetected : When we use a protetcted aceess specifier,the method is accessible only within the  same package or subclass in a diffrent package 
+
+	d)default : when we do not use any access specifier java uses default access specifier.It is visible only from the same package
+
+
+iii)return type : it is a data type that the method returns.It may be a primary data type,object,collection or void.If the method does not return anything we use void keyword .
+
+iv)Methiod name :It is a unique name that is used to define the method or function.It should correspond to functionality of the method .Suppose if we are creating a method for subtraction of two number,the method name must be subtraction().A method is called using it's name 
+
+
+v)Parameter list : It is the list of parameters sperated by comma and enclosed in a pair of paramtheses.It contains the data type and variable name .
+
+vi)Method Body: It is a part of method declaration,it contains all action to be performed it is enclosed within a pair of curly braces.

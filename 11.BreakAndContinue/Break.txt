@@ -1,0 +1,99 @@
+Break Statement 
+----------------
+When a Java break statement is encountered inside a loop , the loop is imeadiatly terminated and the program control resumes at the next statement following the loop
+
+Java Break statement is used to break loop or switch statement .It breaks in current flow of the program at specified condition.In case of inner loop,it breaks only once 
+
+We can use Java break statement in all types of loop such as for , while and do while loop
+
+Synatx :
+-------
+break;
+
+Example(Break statement usage in loop)
+---------------------------------------
+i)BreakExample.java
+public class BreakExample
+{
+	public static void main(String[] args)
+	{
+		for(int i=1;i<=10;i++)
+		{
+			if(i==5)
+			{
+				break;
+			}
+			System.out.println(i);
+		}
+	}
+}
+
+program will print i till 4 and as soon as i reaches to 5 loop will terminate
+
+Output:
+1
+2
+3
+4
+
+ii) java break example with inner loop
+-It breaks inner loop only if we use break statement inside the inner loop.
+
+
+lets see
+
+BreakExample2.java
+public class BreakExample2
+{
+	public static void main(String[] args)
+	{
+		for(int i=1;i<=3;i++)
+		{
+			for(int j=1;j<=3;j++)
+			{
+				if(i==2 && j==2){break;}
+				System.out.println(i+" "+j);
+			}
+		}
+	}
+}
+
+so it will break the inner loop at i = 2 and j =2 and flow of program will go to outer loop at i =3
+
+1 1
+1 2 
+1 3
+2 1
+3 1 
+3 2
+3 3
+
+suppose we want to terminate the outer for loop within inner for loop we use label
+
+
+iii)break statement in label for loop
+
+BreakExample3.java
+public class BreakExample3
+{
+	public static void main(String[] args)
+	{
+		label1:
+		for(int i = 1;i<=3;i++)
+		{
+			label2:
+			for(int j = 1;j<=3;j++)
+			{
+				if (i==2 && j==2){break label1;}
+				System.out.println(i+" "+j);
+		    }
+		}
+	}
+}
+
+Output :
+------------
+1 1
+1 2 
+1 3
+2 1

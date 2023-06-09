@@ -1,0 +1,52 @@
+Java loop is used to iterate over a part of the program or code several time.If the number of iterationn is fixed it is recommended to use for loop
+
+There are three types of loop
+i)for loop
+-The java for loop is used to iterate over a part of program several times if the number of iteration is fixed , it is recommended to use for loop
+
+-Syntax:
+--------
+for(initialize_of_iterator;condition;updation_of_iterator)
+{
+	
+}
+
+-types of for loop
+a)Simple for loop
+b)for-each or enhanced for loop
+c)labeled for loop
+------------------------------------------------------------------------------------------------
+ii)while loop
+-The java while loop is used to iterate over a peice of code several time . If the number of 
+iteration is not fixed and only condition is known we use while loop
+
+Syntax:
+-----------
+
+while(condition)
+{
+	//block of code;
+	updation_for_iterator;
+}
+
+In loop Updation is necesarrry if not given program will produce infintie loop
+
+------------------------------------------------------------------------------------------------
+
+
+iii)do-while loop
+-----------------
+The java do while loop is used to iterate over a part of the program several times.Use it if the number of iteration is unknown or number of iteration is not fixed and if you must have to 
+execute the loop at least once.
+
+do
+{
+	Statement1;
+	..
+	statementN;
+
+	updation_for_iterator;
+
+}while(condition)
+
+dowhile loop always execute at least once
