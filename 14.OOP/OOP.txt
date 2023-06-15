@@ -1,0 +1,70 @@
+OOP or Obejcte oriented programming is a programming paradigm based on the concept of object
+
+What is a obejct ?
+-Obejct are real world entities
+
+How OOPs Help us solve real world problems :
+OOP basic goal is to solve real world problem via using real word entities that is object in programming to solve it .
+
+For Example we need to built a car racing game 
+-The first thing comes in our mind is different cars and tracks these are all real world entities with different properties 
+
+Like car is a global Name which represents car across all the globe like car can be a BMW,Lambo,Audi or even alto a basic car so instead of making a car again and again in programming language which will act as a template to represet different car
+
+So car can be a class with name as a object so all the names of cars will fall in this template like BMW or audi we can pass that name in car --class object name.
+
+and there functionality will be drive only do we wont have to make different function for different car.
+
+
+So OOps Helps us translate these real world entities into programing.
+
+OOP:-object oriented programming is a methodologyy or paradigm to design a program using classes and object .It Simplifies the software development and maintenance by providing some concept defined below:
+
+a)Class :Is a user defined data type which defines its properties and its function.Class is the only logical reperesentation of the data.For example Human being is class,the body part of a human being are its properties ,and the action performed by the body part are known as funcion.
+
+The class does not occupy any memory space till the time an object is instantiated.
+
+
+Object is a run time entity .It is an instance of the class.An object can represent a person,place or any other item.An object can operate on both data members and member function.
+
+
+class car
+{
+	String name;---------------------------
+	int modelNo.;                         }
+	String yearOfManufacture;             }------>class attribute or member function
+	String Company;                       }
+	String Color;--------------------------
+
+	function accelarate()----------------->class methods 
+	{
+
+	}
+
+	function brake()
+	{
+
+	}
+
+}
+/*Now based on these car class we can make many object which will represnt car company*/
+
+main()
+{
+	car s1=new car();
+	s1.name=alto;
+	s1.modelNo.=800;
+	s1.yearOfManufacture='2000';
+	s1.company="Maruti";
+	s1.color='black';
+
+	car s2=new car();
+	s2.name=x;
+	s2.modelNo.=7;
+	s2.yearOfManufacture='2000';
+	s2.company="Audi";
+	s2.color='black';
+
+	/*So here as we can see we can make different object for class car template which points to 
+	different car and company and we can do easily by making just one class instead of defining it for millions of car model and company */
+}
