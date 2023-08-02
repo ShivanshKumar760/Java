@@ -1,0 +1,47 @@
+Advantage of array 
+-------------------
+1.Code optimization : It makes the code optimized we can retrieve or sort the data efficiently 
+
+2.Random access:We can get any data located at an index position
+
+
+Disadvantage of array 
+--------------------- 
+1.Size limit : we can store only the fixed size of elements in the array.It dosent gorw its size at runtime .To solve this problem ,collection framework in java which grows automatically   
+
+
+Types of array in java:
+------------------------
+
+there are 2 types of array in java 
+
+1.linear or single dimensional array
+
+2.Multi dimensional array
+
+*Syntax to declare an array in java 
+
+[datatype[] arr_name = new datatype[size];]
+[datatype[] arr_name;]
+or
+[datatype arr_name[];]
+
+
+Example to inititalze a single dimensional array:
+--------------------------------------------------
+
+int arr[]=new int[3];
+arr[0]=1;
+arr[1]=2;
+arr[3]=3;
+
+or 
+
+int[] arr = {98,97,85};
+
+or 
+int arr[];
+arr=new int [3];
+arr[0]=1;
+arr[1]=2;
+arr[3]=3;

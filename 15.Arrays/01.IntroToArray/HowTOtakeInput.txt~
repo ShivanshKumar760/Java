@@ -1,0 +1,12 @@
+for taking value from user ie inputing value into single dimensional array we will use index
+|
+|
+|
+ ----------->as we saw in array initialization:
+ 				int arr[]=new int[3];
+				arr[0]=1;
+				arr[1]=2;
+				arr[3]=3;
+
+				where 0 in arr[0]  is index of array 
+

@@ -1,0 +1,46 @@
+for taking value from user ie inputing value into single dimensional array we will use index
+|
+|
+|
+ ----------->as we saw in array initialization:
+ 				int arr[]=new int[3];
+				arr[0]=1;
+				arr[1]=2;
+				arr[3]=3;
+
+				where 0 in arr[0]  is index of array 
+
+but for inserting element via user input we will take :
+1)Size of array as input from user
+
+2)we will iterate through size of array such that the range of iteration
+is 0 to sizw -1 ,and then we will take index from 0 to size -1 and assign it to
+iterator variable
+
+3)we will use the iterator variable value as index to insert element into array.
+
+pseudo code
+
+array[];
+size=input();
+loop(iterator = 0 to iterator<size)
+{
+	array[iterator]=input();
+}
+	
+
+lets see an working example
+
+public class UserInput
+{
+	public static void main(String[] args)
+	{
+		Scanner obj=new Scanner(System.in);
+		int size = obj.nextInt();
+		int arr[]=new int[size];
+		for(int i=0;i<size;i++)
+		{
+			arr[i]=obj.nextInt();
+		}
+	}
+}

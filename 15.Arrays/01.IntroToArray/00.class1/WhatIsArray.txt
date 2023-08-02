@@ -1,0 +1,101 @@
+What is Array in Java or Any Other Programming Language ?
+
+Ans : Array in Java(Or in any programming language) is a list/collection of the similar data type value like a list of integer number or a list of character 
+
+* Now array is a datatype or data structure :
+Ans :Lets understand data type and date structure
+
+Data type:-In computer a datatype is a classification of data that determines the type of value that can be stored ,manipulated and processed
+
+Data structure :-is a Storage that is used to store and organise data.It is a way of arranging data on a computer .So that it can be accesed and updated efficiently.A data structure is not only used for organising the data ,it is also used for processing ,reteriving the data and also storing it .
+
+
+So now what is a array ?
+-----------------------
+An array is a collection of item stored at contagious memory location (ie continous memory location).The idea is to store multiple items of the same type together.This makes it easier to 
+calculate the position of each element by simply adding an offset to a base value ie the memory location of the first element of the array generally denoted by the array name to refer 
+
+So since array stores multiple data in a continous memory location we can easily say that it is a data structure or a linear data structure because it can store value of any data type  which we can access ,delete and update the existing value and also we can add on the new value into it .
+
+
+#In Java Array is also a Non-Primitive data type which means it is a object or in more specific terms They are the references type of the refering object  ,They are not defined like premitive Data type and they are created by the programmer like defining the size of array and all
+
+
+Ex:
+----
+int[] marks = new int[3];
+
+lets break the above line :
+
+1.int[]----------->indicating array of integer data type ie [] indicate array and int is for integer
+
+2.marks is the refrence to the array's first element memory address 
+o
+3.new is used to allocate or assign a new memory size to a non primitive data type 
+
+4.int[3] means create a intger array of 3 element 
+
+5.new int[3] means create a size for a new intger array to store 3 element that size will be equal to number of element * size of datatype here it will br 4*3=12 bytes of storage 
+
+So lets see this above line again:
+--------------------------------------- 
+int[] marks = new int[3];
+
+here just because int[] is called / assign before a variable name dosent make it a premitive datatype like(int x) no ,it means in above code we are making a marks object of integer array class so if we match it with a class and object declaration we can understand it claraly
+
+class_name object_name=new class_name(constructor paramenter),similarly it is for array declaration
+
+int[]//integer array class
+{
+	int[n]//integer array class constructor
+	{
+
+	}
+}
+
+int[] marks = new int[size];
+
+->Array in java is a index based data structure 
+
+->Array in Java like any other programming language use 0 based indexing which means first element in array is position to be at 0 and then then all the other element are placed at a position of +1  
+
+->Unlike C/C++ where we have to use for loop to count the length of array or we use 
+sizeof(array)/sizeof(array datatype) function to find length of array
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int arr[]={1,3,3,4};
+	int l=sizeof(arr)/sizeof(int);
+	cout<<l;
+	return 0;
+}
+
+
+,
+in Java we can do that easily via a method known as(.length)
+
+Syntax :
+---------
+[array_name.length;]
+
+
+More,
+----
+
+In Java ,array is an object of a dynamically generated class.Java array inherits the object class , and implements the serialization as well as clonable interface[we will study later in OOP]
+
+->We can store primitive value or object in array, and like C/C++ ,we can also create single dimensional or multidimensional array in java .
+
+->Moreover , Java provides the feature of anonymous arrays which is not available inn C/C++
+
+Array=[ |  |  |  |  |  |  ]
+       0  1  2  3  4  5  6
+       |                 |
+       |                 |
+    first index       last index
+
+length of array : 7
+indexing range of array  : 0 to length_of_array-1  
