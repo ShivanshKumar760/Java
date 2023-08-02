@@ -1,0 +1,62 @@
+Memory allocation of array
+---------------------------
+
+->So how does a array acquire memory and store its
+element , lets understand with a example
+
+suppose :- we declare a integer type array
+
+	[int array[]=new int[3];]
+
+now we know the integer datatype take 4 bytes of
+memory to store a single integer value
+
+and since our array is of integer datatype and
+will store 3 element of integer type so the total
+space or memory space require by array will br
+
+4*3 = 12 bytes Now lets see how this 12 bytes of
+memory will be allocated to the array and it
+element ; this 12 bytes of array will be a continous memory block ,lets see how
+
+int arr[]={item1,item2;item3};
+
+Now each item1 , item2 and item3 will be of integertype so they will take 4 bytes of memory and this 4
+bytes of memory will be one after another
+
+1)item1:
+[101
+[102
+[103
+[104
+
+Now item2 will be placed just after 104 memory address that is 105
+
+2)item2:
+[105
+[106
+[107
+[108
+
+3)item3:
+[109
+[110
+[111
+[112
+
+
+int arr[] address will be the first element starting block address that is 101
+
+int arr[]:
+
+[101|102|103|104|105|106|107|108|109|110|111|112]
+
+this is the memory block of arr array
+
+Starting memory address or refrence memory address of each element is :
+
+item1 : 101
+item2 : 105
+item3 : 109
+
+so as we can see each is stored in contionous memory block by sepration of 4 bytes 
