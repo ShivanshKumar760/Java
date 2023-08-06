@@ -60,3 +60,5 @@ item2 : 105
 item3 : 109
 
 so as we can see each is stored in contionous memory block by sepration of 4 bytes 
+
+Now lets see how the memory is allocated in JVM to array
