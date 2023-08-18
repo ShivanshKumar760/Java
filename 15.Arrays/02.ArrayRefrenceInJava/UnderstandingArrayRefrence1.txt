@@ -1,0 +1,306 @@
+Array Refrence in Java
+--------------------------
+
+This is very important to understant in order to understand a Array copy and cloning method 
+
+
+=>So suppose , we declared a array like below :
+
+int arr[];
+arr=new int[2];-->Memory for two element of type integer that is 4*2=8 bytes will be allocated in heap
+
+and refrence to first element of array which is also the address of array will get stored in stack memory:
+
+
+|     |
+|     | 
+|     |
+|     |                   HEAP:[item1,item2]//each item is given a 4 bytes of m
+|     |
+|_____|     
+|_arr_|-->101
+|__a__|->xfc8
+
+
+HEAP:-
+{101}item1//101 is the starting bit address for item1 and also the address of the array
+{102}
+{103}
+{104}
+--
+{105}item2
+{106}
+{107}
+{108}
+--
+
+So now suppose we want to make a new array name arr2 with all element of arr ie we want to make a copy of arr.
+
+So our simple first approach will be 
+
+public classs Copy
+{
+	public static void main(String args[])
+	{
+		int arr[];
+		arr=new int[2];
+		arr[0]=2;
+		arr[1]=3;
+
+		int arr2[];
+		arr2=arr;//this will provide arr2 all the element of arr 1 
+		//lets see if our method workded or not by printing them
+		System.out.print("The elements of first array is :{ ");
+		for(int i=0;i<arr.length;i++)
+		{
+		    System.out.print(arr[i]+" ");
+		}
+		System.out.println("}");
+		System.out.print("The elements of second array is :{ ");
+		for(int i=0;i<arr2.length;i++)
+		{
+		    System.out.print(arr2[i]+" ");
+		}
+		System.out.println("}");
+	}
+}
+
+lets run the program and see output :
+
+[java Copy.java]
+
+o/p
+The elements of first array is :{ 2 3 }
+The elements of second array is :{ 2 3 }
+
+
+So as we can see the element of arr and arr2 is exactly the same and hence we can say that arr2 is the copy of arr array and since arr2 is a different array carrying elements of arr,hence changing the elements in arr2 wont effect the original array arr right?
+
+->Lets check it out :
+public classs Copy
+{
+	public static void main(String args[])
+	{
+		int arr[];
+		arr=new int[2];
+		arr[0]=2;
+		arr[1]=3;
+
+		int arr2[];
+		arr2=arr;//this will provide arr2 all the element of arr 1 
+		//lets see if our method workded or not by printing them
+		System.out.print("The elements of first array is :{ ");
+		for(int i=0;i<arr.length;i++)
+		{
+		    System.out.print(arr[i]+" ");
+		}
+		System.out.println("}");
+		System.out.print("The elements of second array is :{ ");
+		for(int i=0;i<arr2.length;i++)
+		{
+		    System.out.print(arr2[i]+" ");
+		}
+		System.out.println("}");
+		//changing arr2 element :
+		arr2[0]=5;
+		arr[1]=10;
+		/*Now since we changed the element of arr2 that should only change the element of arr2 and now arr ->right ? lets see this via printing
+		*/
+
+		System.out.println("----------------------------------------------------");
+		System.out.println("arr2 after changing the value of elements" );
+		System.out.println("");
+		System.out.print("The elements of second array is :{ ");
+		for(int i=0;i<arr2.length;i++)
+		{
+		    System.out.print(arr2[i]+" ");
+		}
+		System.out.println("}");
+
+		System.out.println("----------------------------------------------------");
+		System.out.println("arr after changing the value of elements in arr2" );
+		System.out.println("");
+		System.out.print("The elements of first array is :{ ");
+		for(int i=0;i<arr.length;i++)
+		{
+		    System.out.print(arr[i]+" ");
+		}
+		System.out.println("}");
+	}
+}
+
+Output:
+-------
+The elements of first array is :{ 2 3 }
+The elements of second array is :{ 2 3 }
+----------------------------------------------------
+arr2 after changing the value of elements
+
+The elements of second array is :{ 5 10 }
+----------------------------------------------------
+arr after changing the value of elements in arr2
+
+The elements of first array is :{ 5 10 }
+
+
+So as we can see although we changed the element in arr2 but it also got changed in arr why did that happen when arr2 is a diffrent array than arr 
+
+
+or is it ?
+
+Well no arr2 is not a diffrent array than arr but it is the same array with different refrence variable name lets see
+
+
+Since Java is a Object oriented Programming language and array is a object ie a 
+non primitive data type unlike array in C/C++ which are primitive so when we initialize array in java it gets stored in HEAP and it's refrence value is stored in stack 
+
+
+int arr[]=new int(2);//this allocates a new memory in heap
+arr[0]=2;
+arr[1]=3;
+
+|     |
+|     | 
+|     |
+|     |                   HEAP:[item1,item2]//each item is given a 4 bytes of m
+|     |
+|_____|     
+|_arr_|-->101
+|__a__|->xfc8
+
+
+HEAP:-
+{101}item1//101 is the starting bit address for item1 and also the address of the array
+{102}
+{103}
+{104}
+--
+{105}item2
+{106}
+{107}
+{108}
+--
+
+Now when we write :
+
+int arr2[]=arr;//here the java compiler will look at arr as a refrence variable and pass the refrence variable value which is the memory address of arr array and hence 
+
+arr2 is actually pointing to arr memory address rather than arr2 being a new array
+
+int arr2=address(arr);
+
+
+[
+int arr2[]=arr;
+
+this above line meand arr2 is a refrence variable to store refrence id of array which is arr
+]
+
+int arr[]=new int(2);//this allocates a new memory in heap
+arr[0]=2;
+arr[1]=3;
+int ar2[]=arr;
+
+|     |
+|     | 
+|     |
+|     |                   HEAP:[item1,item2]//each item is given a 4 bytes of m
+|_____|    
+| ar2 |-->101    
+|_arr_|-->101
+|__a__|->xfc8
+
+
+HEAP:-
+{101}item1//101 is the starting bit address for item1 and also the address of the array
+{102}
+{103}
+{104}
+--
+{105}item2
+{106}
+{107}
+{108}
+--
+
+So since ar2[] it points to same array ie arr the changes made in ar2[] will reflect in arr
+
+hence insted of creating a copy of array we are creating copy of refrence variable to arr[]/array address and not making a copy of array it is also known as shallow copy
+
+
+Note in java assigning array to another array is very easy:
+
+int arr[];
+arr=new int[2];
+int arr2[] = arr;//totally legal
+
+
+But we cannot do the same thing in C++,that is 
+
+int arr[]={1,2};
+int arr2[] = arr;//error cause we cant access the memory address of arr just like this 
+
+
+>it is beacuse  Java uses refrence andd CPP uses pointer here the reason why Java can  directly assign array to another array is cause when we assign suppose array1 to array 2 ,array 2 becomes refrence to array1 cause array are object in java and cause of which it is stored in heap and array 1 refrence in stack memory ,so initializing array1 to array2 makes array2 a copy of refrence address of arr1 
+
+
+
+//SO now if, assigning array1 to array2 makes a shallow ir hollow copy of array and instead of making a copy of array it points to the same array how can we create a copy of array
+
+
+1)use clone method
+
+pseudo code:
+
+int[] arr=new int[3];
+arr={1,2,3,4};
+int[] arr2=arr.clone();
+
+arr2[1]=4;
+System.out.println("Original array is:");
+for(int i=0;i<arr.length;i++)
+{
+	System.out.print(arr[i]+" ");
+}
+
+System.out.println("Cloned array is :");
+for(int i=0;i<arr2.length;i++)
+{
+	System.out.print(arr2[i]+" ");
+}
+
+
+op
+1 2 3 4
+1 4 3 4
+
+And as we can see changing value in arr2 didn't effect value of arr1
+
+
+Another method is copyOf() or copyOfRange()
+
+
+2)copyOf() or copyOfRange():
+Another method is that inside JavaScript package we have Array class and inside it we have some method like copy(),copyOf() ...
+
+int[] arr=new int[3];
+arr={1,2,3,4};
+int[] arr2=Arrays.copyOf(arr,2);
+
+//arr2[1]=4;
+System.out.println("Original array is:");
+for(int i=0;i<arr.length;i++)
+{
+	System.out.print(arr[i]+" ");
+}
+
+System.out.println("Cloned array is :");
+for(int i=0;i<arr2.length;i++)
+{
+	System.out.print(arr2[i]+" ");
+}
+
+output:
+
+1 2 3 4
+1 2
