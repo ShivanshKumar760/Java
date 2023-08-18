@@ -1,0 +1,113 @@
+Stack  Vs Heap Memory.
+----------------------
+
+So in Jvm under memmory component two important memory component are stack and heap memory.
+
+So out of the two where does our array get stored .
+
+
+Stack Memory-Is used to store the primitive data type ,ie refrence variable ,normal variable and function call
+
+where as ,
+
+Heap Memory-Heap memory is used to store the object ie non primitive data and since array is a object it also gets stored in heap memory.
+
+lets understand with a example 
+
+
+int a ;--------->this is a variable with primitive data type that is int or integer ,so a which points a memory adderess will get stored in Stack memory component
+
+|     |
+|     | 
+|     |
+|     |
+|     |
+|     |
+|_____|     
+|__a__|->xfc8
+
+a is stored inside stack memory at memory address = xfc8 which is what variable a denote
+
+Now lets see how array is stored inside memory 
+
+->Lets say we declare a int[] array without allocating it a memory through (new) or array literal ({})
+
+
+int a;
+//declaring a array
+int arr[];
+
+Now what will happen is since the arr array is not declared with new keyword or array literal , the arr ie name of array will get stored inside Stack component ,
+
+But wait a minute we discussed above that the array is a Object so it should get stored inside the Heap and not stack ,Well if we remember correctly in the introduction of OOP we studied that a object will not be assigned a memory until it is initiated ,So when we type or declare a array without giving it a value or using new keyword it is not being inititated and hence the arr variable will be stored inside of a Stack memory component as a refrence variable 
+
+
+Now what is a refrence variable in java -well a refrence vaiable is a pointer which points to exact location ie memory address of the entity or object so when a array is declared without new keyword or value it creates a refrence variable inside Stack which will point to array address once it's given a  value 
+
+
+
+int a;
+//declaring a array
+int arr[];
+
+|     |
+|     | 
+|     |
+|     |
+|     |
+|_____|     
+|_arr_|-->for now it wont refer to any memory address cause the object is not called     
+|__a__|->xfc8
+
+
+but once we assign the value to array suppose :
+
+arr={1,3,4,5};//this will allocate the array in heap
+
+|     |
+|     | 
+|     |
+|     |                   HEAP:[item1,item2,item3,item4]//each item is given a 4 bytes of m
+|     |
+|_____|     
+|_arr_|-->
+|__a__|->xfc8
+
+HEAP:[item1,item2,item3,item4]//each item is given a 4 bytes of memory inside the heap cause array is of integer type 
+
+
+HEAP:-
+{101}item1//101 is the starting bit address for item1 and also the address of the array
+{102}
+{103}
+{104}
+--
+{105}item2
+{106}
+{107}
+{108}
+--
+{109}item3
+{110}
+{111}
+{112}
+--
+{113}item4
+{114}
+{115}
+{116}
+--
+
+So now when the array is initialized and given a memory space inside HEAP in Stack  component the refrence variable for array will point to array address in heap:
+
+
+|     |
+|     | 
+|     |
+|     |                   HEAP:[item1,item2,item3,item4]//each item is given a 4 bytes of m
+|     |
+|_____|     
+|_arr_|-->101
+|__a__|->xfc8
+
+And this is how array is stored 
