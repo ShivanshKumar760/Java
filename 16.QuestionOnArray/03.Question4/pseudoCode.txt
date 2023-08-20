@@ -1,0 +1,41 @@
+Lets understand how the code will work:
+
+
+Steps we need to follow:(Algorithm)
+
+1.Take array size as input 
+	size = input();
+
+2.provide array element or insert element for array
+
+		loop(array till size n for iterator i)
+		{
+			arr[i]=input();
+		}
+
+
+
+3.find array is sorted or not  -----Now how can we do that ,well we can do that via brute force / linear search ie we can traverse whole array and maintain a pointer or a variable check  which will be a boolena type of true  and will get updated whenever we encounter that arr[i]<arr[i-1] to false
+
+	check =true;
+	loop(array from 1 to till size n for iterator i)
+	{
+	 	condition(arr[i]<arr[i-1])
+	 		then:check=false;
+	 	else:check=true;
+	}
+	
+
+
+size = input();
+loop(array till size n for iterator i)
+{
+	arr[i]=input();
+}
+check =true;
+loop(array from 1 to till size n for iterator i)
+{
+	condition(arr[i]<arr[i-1])
+	 	then:check=false;
+	else:check=true;
+}
