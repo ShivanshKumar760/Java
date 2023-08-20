@@ -1,0 +1,32 @@
+Q2.Write a program to find the last occurence of a element in a array
+
+Explanation:Lets understand this suppose we have a array a  ie a={1,2,3,2,4}
+ 
+In this array we want to find the last occurence or position of element 2 ie at which index the last 2 occured  in the array for that we will use indexing 
+
+a={1,2,3,2,4}
+
+Now '2' occur at index 1 and index 3 is the last position where 2 occures in array
+So,How can we find the last occurence of two in array arr with help of code well in this also we can use brute force approach ie linear search 
+
+Steps:
+	1.Traverse through array via maintaining a pointer index set at 0
+	2.Now while traversing through array we will provide or use a condition that whenever we will encounter the element for which we need to find the last occurence we will update index variable value to current index at which iteration is taking place .
+
+
+
+
+Taking input :
+
+1.Size of array
+
+2.insert array element
+
+3.input for number to find occurence
+
+Output format:
+
+size:5
+1 2 3 2 4
+element:2
+lastIndex:3
