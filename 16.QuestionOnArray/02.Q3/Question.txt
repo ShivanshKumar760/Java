@@ -1,0 +1,18 @@
+Q3.Write a program to find the element count which are strictly greater than given number "X" in the given array:
+
+
+Explanation:
+
+arr={1,2,3,4,5,2,1};
+and we asked user for a input x let x=3 ,so we need to write a program to count the number of element ,greater than x=3 in array 
+
+so if x=3 and arr={1,2,3,4,5,2,1};
+
+elements greater than 3 will be 4 and 5 ie arr[3] and arr[4]  makes total of 2 element are greater than 3 
+
+
+Approach :
+
+1)Iterate through array
+2)use index from 0 to length -1 and compare it with X such that arr[i]>X
+3)when found a element greater than x increment total count
