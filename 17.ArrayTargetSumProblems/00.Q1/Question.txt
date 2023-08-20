@@ -1,0 +1,34 @@
+Q1.Find the total number of pairs in the array whose sum is equal to the given value or number X
+
+Explanation:
+-------------
+lets understand the question first,Suppose we have a array 'arr'
+
+arr={4,6,3,5,8,2} and x is given as 7(x=7)
+
+so what are the pair of element in array which when sumed or added give a result 7 which is equal to X , to find the pair a good approach will be to take each number from array and then add them with other elements of array one by one and compare it with x 
+
+like
+
+arr[0]=4 ----------(+)arr[1]=6//10==7---false
+|| 	|	|
+||	|	|___________(+)arr[2]=3//7==7---true--1 pair
+||	|
+||	|_______________(+)arr[3]=5//9==7--false
+|| 
+||__________________(+)arr[4]=8//12==7--false
+|
+|____________________(+)arr[5]=2//6==7--false
+
+
+count=1
+
+Now for arr[1]=6 ,remember /note dont take previous element when we will compare with new element cause it's already compared / covered in first iteration
+
+like arr[1]+arr[0]//we dont have to take arr[0] as it's already covered in previous iteration
+
+Now this breaks down the problem in much simple way:
+
+And the pattern which we got is :
+
+that arr[i] will be sumed with all element from arr[i+1] to length(arr)-1 and compared with X 
