@@ -1,0 +1,41 @@
+Q4.Write a Program to tell if array is sorted or not 
+
+Explanation:
+-------------
+
+Lets understand how can we tell this using a example of a array 
+
+arr={5,6,7,10,11};
+
+Now if we see arr-array we can clearly tell that arr is sorted in ascending order ie element are arranged from smaller value to higher value .
+
+and if we see closely we can observe a pattern which can classify weather or not a array is sorted 
+
+So if we look closely in order for array to be sorted arr[i]<arr[i+1]--->and if this returns true it is sorted 
+
+
+or 
+arr[i-1]>arr[i]-->and if this condition give false that also means array is sorted cause that means array previous element is not grater than next element 
+
+
+Approach:
+
+1.We will take a array
+2.we will use a boolean check variable with preset value true 
+
+3.we will iterate array from i=1 to length(array)-1 and we will check :
+	arr[i]<arr[i-1]
+	{
+		check=false;
+	}
+	 --now why are we doing it like this when we can easily start array
+	
+
+	traversing from 0 to length(array)-1 and check if arr[i]<arr[i+1] well cause the flaw is in arr[i+1] cause indexing for array element is till 0 to length -1 and when i is equal to length(Array)-1 and we use arr[i+1] it will show erro index out of bound that's why we use :
+	arr[i]<arr[i-1]
+	{
+		check=false;
+	}
+
+
+4.When arr[i]<arr[i-1] condition will become true we will update the value of check from true to false and break the loop at that point which will indicate that array is not sorted .
