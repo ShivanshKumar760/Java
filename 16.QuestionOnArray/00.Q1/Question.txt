@@ -1,0 +1,13 @@
+Q1.Count the number of occurences of a element in a array
+
+Explanation :Suppose given a array:{1,2,2,3,4,2}
+
+We need to count the number of occurence for a element in the array suppose it's the element is 2 so the number of Occurences will be 3
+
+Taking Input:
+
+first line give input for size of array
+
+second line provide array element as input 
+
+third line give the number whose occurence need to be found out.
